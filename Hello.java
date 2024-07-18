@@ -52,7 +52,7 @@ class Hello {
         int pre = ++num; // increment value then fetch
         int post = num++; // fetch value then increment
 
-        System.out.println("pre: " + pre);
+        System.out.println("pre: " + pre); 
         System.out.println("post: " + post);
     }
 }
