@@ -3,7 +3,12 @@ package condition;
 public class Condition {
     public static void main(String[] args) {
         int a = 10;
+
+        // if else
         System.out.println(more_or_less_than_20(a));
+
+        // ternary
+        System.out.println(equal_to_20(a));
     }
 
     public static String more_or_less_than_20(int num) {
@@ -13,5 +18,9 @@ public class Condition {
             return "More than 20";
         else
             return "Less than 20";
+    }
+
+    public static String equal_to_20(int num) {
+        return num == 20 ? "yes" : "No";
     }
 }
