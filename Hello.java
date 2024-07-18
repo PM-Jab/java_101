@@ -7,6 +7,8 @@ class Hello {
         conversion_and_casting();
 
         promotion();
+
+        assign_operators();
     }
 
     public static void type_and_variable() {
@@ -42,5 +44,15 @@ class Hello {
         int result = a * b; // type promote from byte to int
 
         System.out.println(result); // 300
+    }
+
+    public static void assign_operators() {
+        int num = 5;
+
+        int pre = ++num; // increment value then fetch
+        int post = num++; // fetch value then increment
+
+        System.out.println("pre: " + pre);
+        System.out.println("post: " + post);
     }
 }
