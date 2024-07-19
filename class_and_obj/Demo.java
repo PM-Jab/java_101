@@ -46,6 +46,18 @@ class Human {
     }
 }
 
+class Employee extends Human {
+    private String employee_id;
+    private String role;
+    private int salary;
+
+    public Employee() {
+        employee_id = "a1" + this.getName();
+        role = "associate";
+        salary = 15000;
+    }
+}
+
 public class Demo {
     public static void main(String[] args) {
         Human jab = new Human();
