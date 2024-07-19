@@ -9,6 +9,8 @@ class Human {
         age = 18;
     }
 
+    // overload providing multiple methods with the same name but different
+    // parameter lists
     public Human(String name) {
         this.name = name;
         age = 18;
@@ -27,11 +29,13 @@ class Human {
         return this.age;
     }
 
+    // obj.name accesses name field of the object referenced by obj in argument.
     public void setName(String name, Human obj) {
         System.out.println("a");
         obj.name = name;
     }
 
+    // this.name accesses name field of the current object(the method caller)
     public void setName(String name) {
         System.out.println("b");
         this.name = name;
@@ -45,8 +49,8 @@ class Human {
 public class Demo {
     public static void main(String[] args) {
         Human jab = new Human();
-        // jab.setName("Jab");
-        // jab.setAge(10);
+        jab.setName("Jab");
+        jab.setAge(10);
 
         System.out.println(jab.getName() + ":" + jab.getAge());
     }
