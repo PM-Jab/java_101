@@ -17,11 +17,22 @@ class Human {
     public Human(String name) {
         this.name = name;
         age = 18;
+
+        System.out.println("Define Human with custom name");
     }
 
     public Human(int age) {
         name = "BigTuu";
         this.age = age;
+
+        System.out.println("Define Human with custom age");
+    }
+
+    public Human(String name, int age) {
+        this.name = name;
+        this.age = age;
+
+        System.out.println("Define Human with custom name and age");
     }
 
     public String getName() {
@@ -58,7 +69,27 @@ class Employee extends Human {
     // java constructor always execute super() first
     public Employee() {
         super(); // if super class exist then execute super class's constructor
-        employee_id = "a1" + this.getName();
+        employee_id = "a1" + this.getName() + this.getAge();
+        role = "associate";
+        salary = 15000;
+
+        System.out.println("Define Employee");
+    }
+
+    public Employee(String name) {
+        super(name); // if super class exist then execute super class's constructor with
+                     // (string argument)
+        employee_id = "a1" + this.getName() + this.getAge();
+        role = "associate";
+        salary = 15000;
+
+        System.out.println("Define Employee");
+    }
+
+    public Employee(String name, int age) {
+        super(name, age); // if super class exist then execute super class's constructor with
+                          // (string and int arguments)
+        employee_id = "a1" + this.getName() + this.getAge();
         role = "associate";
         salary = 15000;
 
@@ -93,7 +124,7 @@ public class Demo {
     }
 
     public static void employee_class() {
-        Employee jab = new Employee();
+        Employee jab = new Employee("Robert", 50);
 
         System.out.println(jab.getEmployeeId() + ":" + jab.getRole() + ":" + jab.getSalary());
     }
